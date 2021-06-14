@@ -1,5 +1,5 @@
 {% set name = "flaskwebgui" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c7d31db4f3f7cca1cab7dd15d1a9810d1b8d59051cfe0cbd2e2b6a7c16a2cf1
+  sha256: 405b1fb23d755c17bad8f7d78017b6ac76d63841a5942d8c66dc6f7effee7d4d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Create desktop applications with Flask/FastAPI/Django!'
+  summary: Create desktop applications with Flask/FastAPI/Django!
   dev_url: https://github.com/ClimenteA/flaskwebgui
 
 extra:
