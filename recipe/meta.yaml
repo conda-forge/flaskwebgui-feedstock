@@ -1,5 +1,5 @@
 {% set name = "flaskwebgui" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 786d46dc1be65e6bb46b5aa4a0eb3af7d531769cb756fb7a442a64d3595ee72a
+  sha256: 24b0a1bad3e263ba17a9fd947566cf193a5bd9e37d5427e73412af80d5dad55b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
